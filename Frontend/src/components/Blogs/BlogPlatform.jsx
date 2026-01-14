@@ -367,6 +367,39 @@ function BlogList({
                           : "bg-[#0f1419] text-gray-400 hover:bg-[#8b5cf6]/20 hover:text-[#8b5cf6]"
                       }`}
                     >
+                      <X className="w-3 h-3" /> Reset all filters
+                    </button>
+                  )}
+                </div>
+
+                {selectedTag && (
+                  <button
+                    onClick={() => setSelectedTag("")}
+                    className="w-full px-3 py-2 bg-red-500/10 border border-red-500/30 rounded-lg text-red-400 text-sm flex items-center justify-center gap-2 hover:bg-red-500/20 transition-all"
+                  >
+                    <X className="w-4 h-4" />
+                    Clear Filter
+                  </button>
+                )}
+              </div>
+
+              {/* Popular Tags */}
+              <div className="bg-[#1a1f2e] rounded-xl border border-gray-800 p-5">
+                <div className="flex items-center gap-2 mb-4">
+                  <Tag className="w-4 h-4 text-[#d946ef]" />
+                  <h3 className="font-bold text-white">Popular Tags</h3>
+                </div>
+                <div className="flex flex-wrap gap-2">
+                  {popularTags.slice(0, 15).map((tag) => (
+                    <button
+                      key={tag.name}
+                      onClick={() => setSelectedTag(tag.name)}
+                      className={`px-3 py-1.5 rounded-lg text-xs font-medium transition-all ${
+                        selectedTag === tag.name
+                          ? "bg-[#8b5cf6] text-white"
+                          : "bg-[#0f1419] text-gray-400 hover:bg-[#8b5cf6]/20 hover:text-[#8b5cf6]"
+                      }`}
+                    >
                       {tag.name}
                     </button>
                   ))}

@@ -291,56 +291,6 @@ export default function AdvancedFeaturesDashboard() {
               </div>
             ) : (
               <div className="text-center py-8 text-white/60 text-sm">
-                <p>No trending questions yet</p>
-              </div>
-            )}
-          </div>
-
-          {/* Buddy Matching */}
-          <div className="bg-white/10 backdrop-blur-xl rounded-3xl p-8 border border-white/20">
-            <div className="flex items-center justify-between mb-6">
-              <div className="flex items-center gap-3">
-                <Users className="w-6 h-6 text-green-400" />
-                <h2 className="text-xl font-bold text-white">
-                  Find Study Buddies
-                </h2>
-              </div>
-              <button
-                onClick={() => navigate("/buddies")}
-                className="text-green-400 hover:text-green-300 flex items-center gap-2 text-sm"
-              >
-                Explore <ArrowRight className="w-4 h-4" />
-              </button>
-            </div>
-
-            {buddies.length > 0 ? (
-              <div className="space-y-3">
-                {buddies.slice(0, 3).map((buddy) => (
-                  <div
-                    key={buddy.userId}
-                    className="bg-white/5 rounded-lg p-4 border border-white/10"
-                  >
-                    <div className="flex items-center justify-between">
-                      <div>
-                        <p className="text-white font-semibold">
-                          {buddy.user?.firstName} {buddy.user?.lastName}
-                        </p>
-                        <p className="text-xs text-white/60">
-                          {buddy.commonCompanies?.join(", ")}
-                        </p>
-                      </div>
-                      <div className="text-right">
-                        <div className="text-lg font-bold text-green-400">
-                          {buddy.matchScore}%
-                        </div>
-                        <div className="text-xs text-white/60">Match</div>
-                      </div>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            ) : (
-              <div className="text-center py-8 text-white/60 text-sm">
                 <p>Complete interviews to find compatible study buddies!</p>
               </div>
             )}

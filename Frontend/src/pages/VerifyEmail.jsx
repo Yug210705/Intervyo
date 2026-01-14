@@ -143,6 +143,17 @@ export default function VerifyEmail() {
               />
             ))}
           </div>
+          <h1 className="text-3xl font-bold text-gray-800 mb-2">
+            Verify Email
+          </h1>
+          <p className="text-gray-600">
+            Enter the 6-digit code sent to
+            <br />
+            <span className="font-semibold text-purple-600">
+              {signupData?.email}
+            </span>
+          </p>
+        </div>
 
           {/* Resend OTP Button */}
           <div className="text-center mb-6">
@@ -175,6 +186,20 @@ export default function VerifyEmail() {
             ← Back to Registration
           </button>
         </div>
+
+        <button
+          onClick={handleVerify}
+          className="w-full bg-gradient-to-r from-purple-600 to-pink-600 text-white py-3 rounded-xl font-semibold hover:from-purple-700 hover:to-pink-700 transition transform hover:scale-105 shadow-lg mb-4"
+        >
+          Verify & Continue
+        </button>
+
+        <button
+          onClick={() => navigate("/register")}
+          className="w-full text-purple-600 font-semibold hover:text-purple-700 transition"
+        >
+          ← Back to Registration
+        </button>
       </div>
     </div>
   );
