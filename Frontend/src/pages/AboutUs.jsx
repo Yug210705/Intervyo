@@ -565,8 +565,8 @@ export default function AboutUs() {
             <div className="inline-block bg-emerald-100 text-emerald-600 px-4 py-2 rounded-full mb-4 font-semibold text-sm">
               Features
             </div>
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-skin-primary">
-              What We <span className="text-emerald-500">Offer</span>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900">
+              What We Offer
             </h2>
             <p className="text-xl text-gray-600">
               Everything you need to ace your interviews
@@ -587,9 +587,9 @@ export default function AboutUs() {
 
             <div className="bg-yellow-300 rounded-3xl p-8 hover:shadow-xl transition-all border-4 border-gray-900">
               <div className="w-12 h-12 bg-yellow-400 rounded-xl flex items-center justify-center mb-4">
-                <Zap className="w-6 h-6 text-skin-primary" />
+                <Zap className="w-6 h-6 text-gray-900" />
               </div>
-              <h3 className="text-xl font-bold text-skin-primary mb-3">
+              <h3 className="text-xl font-bold text-gray-900 mb-3">
                 Instant Feedback
               </h3>
               <p className="text-gray-700 leading-relaxed">
